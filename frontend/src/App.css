@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    font-family: "Lexend Deca", sans-serif;
+}
+
+input::placeholder{
+    font-family: "Lexend Deca", sans-serif !important;
+}
+body{
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #52617a;
+}
+
+.my_container{
+    width: 80% !important;
+    margin: auto;
+}

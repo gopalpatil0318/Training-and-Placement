@@ -1,0 +1,14 @@
+.navbar{
+    background-color: #fff !important;
+    /* box-shadow: 2px 2px 20px 2px #c2ccd620; */
+    border-radius: 33px;
+    background: #fff;
+    box-shadow:  20px 20px 100px #e6e5e5,
+                 -20px -20px 100px #ededed;
+}
+
+
+.mycontainer{
+    width: 90%;
+    margin: auto;
+}

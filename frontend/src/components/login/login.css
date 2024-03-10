@@ -1,0 +1,51 @@
+.tnp__login_container_main{
+    background-color: #fff;
+    width: 30%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 20px 2px #c2ccd620;
+
+}
+
+
+.label{
+    margin-bottom: 30px;
+    color: #52617a;
+}
+
+label{
+    width: 100%;
+    color: #94a2b8;
+    margin-bottom: 10px !important;
+}
+
+input{
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    padding: 15px 15px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+img{
+    width: 80px;
+    margin: auto;
+}
+input::placeholder{
+    font-family: 'Inter';
+}
+
+button{
+    background-color: #52617a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+}

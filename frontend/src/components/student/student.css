@@ -1,0 +1,22 @@
+.tnp__student_container_main{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.tnp__student_container_main input{
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    padding: 15px 15px;
+    border: none;
+    width: 400px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+
