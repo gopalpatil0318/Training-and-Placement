@@ -61,7 +61,7 @@ const Register = () => {
     leetcode: "",
     geeksforgeeks: "",
   });
-  
+
   const [stage, setStage] = useState(1);
 
   const handleChange = (e) => {
@@ -71,7 +71,7 @@ const Register = () => {
       [name]: value,
     });
   };
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,14 +82,14 @@ const Register = () => {
       },
       body: JSON.stringify(formData)
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-    
-    
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+
+
     alert("Student Registered Successfully! ✅")
 
-navigate('/login', { replace: true });
+    navigate('/login', { replace: true });
   };
 
   const nextStage = () => {
@@ -104,7 +104,8 @@ navigate('/login', { replace: true });
 
   const [selectedSkill, setSelectedSkill] = useState('');
   const [skills, setSkills] = useState([]);
-  const [skillOptions, setSkillOptions] = useState(['Java', 'HTML', 'CSS', 'SRPING', 'SQL']);
+  const [skillOptions, setSkillOptions] = useState(['Java', 'HTML', 'CSS', 'SPRING', 'SQL', 'JavaScript', 'React', 'Node.js', 'MongoDB', 'Angular', 'Vue.js', 'Bootstrap', 'SASS/SCSS', 'TypeScript', 'RESTful APIs', 'Git', 'GitHub', 'Docker', 'AWS', 'Azure', 'Firebase', 'Heroku', 'Jira', 'Agile Methodologies', 'UI/UX Design', 'Responsive Web Design', 'SEO', 'Google Analytics', 'Python', 'C++', 'C#', 'ASP.NET', 'Ruby', 'PHP', 'Laravel', 'ASP.NET', 'Flask', 'Django', 'WordPress', 'GraphQL', 'TensorFlow', 'PyTorch', 'Kubernetes', 'CI/CD', 'Shell Scripting', 'Linux/Unix', 'Arduino', 'Raspberry Pi'])
+  ;
 
   const addSkill = () => {
     if (!selectedSkill || skills.includes(selectedSkill)) {
@@ -286,16 +287,16 @@ navigate('/login', { replace: true });
 
             <div>
               <label>Local Address<span class="required">*</span></label>
-              <input type='Text' placeholder='House/Flat No., Street/Road Name, Locality/Area' name="localaddress" value={formData.localaddress} onChange={handleChange}/>
+              <input type='Text' placeholder='House/Flat No., Street/Road Name, Locality/Area' name="localaddress" value={formData.localaddress} onChange={handleChange} />
             </div>
             <div className='d-flex gap'>
               <div>
                 <label>City <span class="required">*</span></label>
-                <input type='text' placeholder='EX. Shirpur' name="city" value={formData.city} onChange={handleChange}/>
+                <input type='text' placeholder='EX. Shirpur' name="city" value={formData.city} onChange={handleChange} />
               </div>
               <div>
                 <label>Dist<span class="required">*</span></label>
-                <input type='number' placeholder='Ex. Dhule' name="dist" value={formData.dist} onChange={handleChange}/>
+                <input type='text' placeholder='Ex. Dhule' name="dist" value={formData.dist} onChange={handleChange} />
               </div>
 
 
@@ -303,12 +304,12 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>State<span class="required">*</span></label>
-                <input type='number' placeholder='Ex. Maharashtra' name="state" value={formData.state} onChange={handleChange}/>
+                <input type='text' placeholder='Ex. Maharashtra' name="state" value={formData.state} onChange={handleChange} />
               </div>
 
               <div>
                 <label>Pincode<span class="required">*</span></label>
-                <input type='number' placeholder='Ex. 425201' name="pincode" value={formData.pincode} onChange={handleChange}/>
+                <input type='number' placeholder='Ex. 425201' name="pincode" value={formData.pincode} onChange={handleChange} />
               </div>
             </div>
             <div className='d-flex' style={{ gap: '10px' }}>
@@ -333,7 +334,7 @@ navigate('/login', { replace: true });
             </div>
             <div>
               <label>10TH Marks<span class="required">*</span></label>
-              <input type='number' placeholder='Ex.89.40' />
+              <input type='number' placeholder='Ex.89.40' step="0.01" />
             </div>
 
 
@@ -342,7 +343,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label for="cars">12TH/Dimploma<span class="required">*</span></label>
-                <select id="cars"  name="tord" value={formData.tord} onChange={handleChange}>
+                <select id="cars" name="tord" value={formData.tord} onChange={handleChange}>
                   <option value="">Choose...</option>
                   <option value="12th">12TH</option>
                   <option value="Diploma">Dimploma</option>
@@ -350,7 +351,7 @@ navigate('/login', { replace: true });
               </div>
               <div>
                 <label>{tord} Percentages<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="tordpercentage" value={formData.tordpercentage} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="tordpercentage" value={formData.tordpercentage} onChange={handleChange} />
               </div>
 
             </div>
@@ -364,6 +365,7 @@ navigate('/login', { replace: true });
                 <option value="TFWS">TFWS</option>
                 <option value="MHT CET">MHT CET</option>
                 <option value="JEE Main">JEE Main</option>
+                <option value="Diploma">Diploma</option>
                 <option value="Management">Management</option>
               </select>
             </div>
@@ -399,7 +401,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 1(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem1sgpa" value={formData.sem1sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem1sgpa" value={formData.sem1sgpa} onChange={handleChange} />
               </div>
               <div>
                 <label for="cars">Sem 1(Backlog)<span class="required">*</span></label>
@@ -418,7 +420,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 2(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem2sgpa" value={formData.sem2sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem2sgpa" value={formData.sem2sgpa} onChange={handleChange} />
               </div>
 
               <div>
@@ -436,7 +438,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 3(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem3sgpa" value={formData.sem3sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem3sgpa" value={formData.sem3sgpa} onChange={handleChange} />
               </div>
 
               <div>
@@ -455,7 +457,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 4(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem4sgpa" value={formData.sem4sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem4sgpa" value={formData.sem4sgpa} onChange={handleChange} />
               </div>
 
               <div>
@@ -474,7 +476,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 5(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem5sgpa" value={formData.sem5sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem5sgpa" value={formData.sem5sgpa} onChange={handleChange} />
               </div>
 
               <div>
@@ -493,7 +495,7 @@ navigate('/login', { replace: true });
             <div className='d-flex gap'>
               <div>
                 <label>Sem 6(SGPA)<span class="required">*</span></label>
-                <input type='number' placeholder='Ex.98.40' name="sem6sgpa" value={formData.sem6sgpa} onChange={handleChange}/>
+                <input type='number' placeholder='Ex.98.40' name="sem6sgpa" value={formData.sem6sgpa} onChange={handleChange} />
               </div>
 
               <div>
@@ -512,6 +514,12 @@ navigate('/login', { replace: true });
             <hr />
 
             <div className='d-flex gap'>
+
+            <div>
+                <label for="cars">OverAll CGPA<span class="required">*</span></label>
+                <input type='number' placeholder='9.9' name="cgpa" value={formData.cgpa} onChange={handleChange} />
+              </div>
+
               <div>
                 <label for="cars">Any Live KT's<span class="required">*</span></label>
                 <select name="livekts" value={formData.livekts} onChange={handleChange}>
@@ -520,6 +528,11 @@ navigate('/login', { replace: true });
                   <option value="YES">YES</option>
                 </select>
               </div>
+
+            </div>
+
+            <div className='d-flex gap'>
+            
 
               <div>
                 <label for="cars">Any GAP during Education<span class="required">*</span></label>
@@ -530,8 +543,12 @@ navigate('/login', { replace: true });
                 </select>
               </div>
 
-
+              <div>
+                <label for="cars">Reason(If any gap during Education)</label>
+                <textarea id="w3review" placeholder='Explain Reason' name="about" value={formData.about} onChange={handleChange} rows="3" cols="30" />
+              </div>
             </div>
+
 
             <div className='d-flex' style={{ gap: '10px' }}>
 
@@ -555,12 +572,22 @@ navigate('/login', { replace: true });
             <div>
               <label for="cars">Area of Interest<span class="required">*</span></label>
               <select name="Division" id="cars">
-                <option value="">Choose...</option>
-                <option value="Frontend">Frontend</option>
-                <option value="Backend">Backend</option>
-                <option value="Fullstack">Fullstack</option>
-                <option value="Testing">Testing</option>
-              </select>
+  <option value="">Choose...</option>
+  <option value="Frontend">Frontend</option>
+  <option value="Backend">Backend</option>
+  <option value="Fullstack">Fullstack</option>
+  <option value="Testing">Testing</option>
+  <option value="DevOps">DevOps</option>
+  <option value="Mobile Development">Mobile Development</option>
+  <option value="Cloud Computing">Cloud Computing</option>
+  <option value="Data Science">Data Science</option>
+  <option value="Machine Learning">Machine Learning</option>
+  <option value="Artificial Intelligence">Artificial Intelligence</option>
+  <option value="Cybersecurity">Cybersecurity</option>
+  <option value="Game Development">Game Development</option>
+  
+</select>
+
             </div>
 
             <hr />
@@ -571,7 +598,7 @@ navigate('/login', { replace: true });
               <div className='d-flex' style={{ gap: '10px' }}>
                 <div>
                   <select
-                  
+
                     id="skill-select"
                     value={selectedSkill}
                     onChange={(e) => setSelectedSkill(e.target.value)}
@@ -609,7 +636,7 @@ navigate('/login', { replace: true });
 
             <div>
               <label>Project 1(Title)</label>
-              <input type='text' placeholder='Project 1 Title' name="project1title" value={formData.project1title} onChange={handleChange}/>
+              <input type='text' placeholder='Project 1 Title' name="project1title" value={formData.project1title} onChange={handleChange} />
             </div>
 
             <div>
@@ -621,7 +648,7 @@ navigate('/login', { replace: true });
 
             <div>
               <label>Project 2(Title)</label>
-              <input type='text' placeholder='Project 2 Title' name="project2title" value={formData.project2title} onChange={handleChange}/>
+              <input type='text' placeholder='Project 2 Title' name="project2title" value={formData.project2title} onChange={handleChange} />
             </div>
 
 
@@ -653,6 +680,19 @@ navigate('/login', { replace: true });
               <div>
                 <label><i class="fa fa-geekforgeeks"></i> GeeksForGeek</label>
                 <input type="url" name="geeksforgeeks" value={formData.geeksforgeeks} onChange={handleChange} placeholder='GeeksForGeeks Profile Link' />
+              </div>
+            </div>
+
+
+            <div className='d-flex gap'>
+              <div>
+                <label><i class="fa fa-leetcode"></i> Codechef</label>
+                <input type="url" name="codechef" value={formData.codechef} onChange={handleChange} placeholder='codechef Profile Link' />
+              </div>
+
+              <div>
+                <label><i class="fa fa-geekforgeeks"></i> HackerRank</label>
+                <input type="url" name="HackerRank" value={formData.hackerRank} onChange={handleChange} placeholder='HackerRank Profile Link' />
               </div>
             </div>
 
